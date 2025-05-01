@@ -13,5 +13,4 @@ provider "aws" {
 resource "aws_instance" "test ubuntu instance" {
     ami = "ami-04e7764922e1e3a57"   #   Amazon Linux Free Tier instance
     instance_type = "t2.micro"
-  
 }
