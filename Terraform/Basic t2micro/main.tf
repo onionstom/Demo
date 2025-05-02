@@ -1,22 +1,4 @@
-terraform {
-  backend "remote" {
-    organization = "TomOnionsTesting"
-
-    workspaces {
-      name = "Demo"
-    }
-    
-  }
-  required_providers {
-    aws = {
-        source = "hashicorp/aws"    
-    }
-  }
-}
-
 provider "aws" {
-  access_key = "AWS_ACCESS_KEY_ID"
-  secret_key = "AWS_SECRET_ACCESS_KEY"
   region = "eu-west-1"
 }
 
