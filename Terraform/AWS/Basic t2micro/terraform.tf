@@ -4,7 +4,7 @@ terraform {
     organization = "TomOnionsTesting"
 
     workspaces {
-      name = "Demo"
+      name = "Basic_EC2_Deployment"
     }
   }
 
