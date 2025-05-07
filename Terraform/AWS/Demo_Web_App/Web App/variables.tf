@@ -8,7 +8,7 @@ variable "db_password" {
   description = "The password for the database"
   sensitive = true
 }
-variable "db_user" {
+variable "db_username" {
   type        = string
   description = "The nuser for the database"
   sensitive = true
