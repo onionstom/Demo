@@ -1,5 +1,5 @@
 module "Web_Module_1" {
-  source = "./Web_App_Module"
+  source = "./Modules/Web_App_Module"
 
   # Input Variables
   bucket_prefix    = "web-app-data"
