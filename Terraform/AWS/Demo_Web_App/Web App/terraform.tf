@@ -7,3 +7,4 @@ terraform {
       name = "Web_App"
     }
   }
+}
