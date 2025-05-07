@@ -7,4 +7,10 @@ module "Web_Module_1" {
   app_name         = "web-app-1"
   instance_type    = "t2.micro"
 
+  # Sensitive variables in Terraform Cloud
+
+variable "DB_ame" {
+  type        = string
+  description = "The name of the database"
+}
 }
