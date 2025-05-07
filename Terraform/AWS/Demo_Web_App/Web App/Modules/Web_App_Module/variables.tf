@@ -45,3 +45,18 @@ variable "domain" {
   description = "Domain for website"
   type        = string
 }
+
+# RDS Variables
+
+variable "DB_name" {
+  type = string
+}
+
+variable "DB_Username" {
+  type = string
+}
+
+variable "DB_Password" {
+  type      = string
+  sensitive = true
+}
