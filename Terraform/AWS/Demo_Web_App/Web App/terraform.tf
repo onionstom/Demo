@@ -7,10 +7,3 @@ terraform {
       name = "Web_App"
     }
   }
-
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-    }
-  }
-}
