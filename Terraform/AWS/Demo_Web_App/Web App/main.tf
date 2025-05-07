@@ -2,6 +2,7 @@ module "Web_Module_1" {
   source = "./Modules/Web_App_Module"
 
   # Input Variables
+  region = "eu-west-1"
   bucket_prefix    = "web-app-data"
   domain           = "TomOnions.co.uk"
   app_name         = "web-app-1"
