@@ -9,5 +9,5 @@ resource "aws_db_instance" "db_instance" {
   password              = var.db_password
   skip_final_snapshot   = true
   publicly_accessible   = false
-  mutli_az              = false
+  multi_az              = false
 }
