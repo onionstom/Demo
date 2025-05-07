@@ -48,7 +48,7 @@ variable "domain" {
 
 # RDS Variables
 
-variable "DB_name" {
+variable "DB_Name" {
   type = string
 }
 
