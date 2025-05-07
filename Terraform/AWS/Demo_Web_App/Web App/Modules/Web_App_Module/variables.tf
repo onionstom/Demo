@@ -17,7 +17,7 @@ variable "app_name" {
 variable "ami" {
   description = "Amazon Linx image to be used for EC2"
   type        = string
-  default     = "ami-04e7764922e1e3a57" # Amazon Linux 2023 AMI 2023.7.20250428.1 // eu-west-1
+  default     = "ami-0df368112825f8d8f" # Ubuntu Server 24.04 LTS // eu-west-1
 }
 
 variable "instance_type" {
