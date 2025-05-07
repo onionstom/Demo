@@ -6,7 +6,5 @@ module "Web_Module_1" {
   domain           = "TomOnions.co.uk"
   app_name         = "web-app-1"
   instance_type    = "t2.micro"
-  DB_Name = var.DB_Name
-  DB_User = var.DB_User
-  DB_Password = var.DB_Password
+
 }
