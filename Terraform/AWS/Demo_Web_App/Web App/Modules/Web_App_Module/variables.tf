@@ -48,15 +48,15 @@ variable "domain" {
 
 # RDS Variables
 
-variable "DB_Name" {
+variable "db_name" {
   type = string
 }
 
-variable "DB_Username" {
+variable "db_username" {
   type = string
 }
 
-variable "DB_Password" {
+variable "db_password" {
   type      = string
   sensitive = true
 }
