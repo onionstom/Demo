@@ -15,6 +15,7 @@ data "aws_route53_zone" "selected" {
 locals {
   dns_zone_id = var.create_dns_zone ? aws_route53_zone.selected[0].zone_id : data.aws_route53_zone.primary[0].zone_id
   subdomain   = var.app_name == "main" ? "" : "${var.app_name}."
+
 }
 
 
