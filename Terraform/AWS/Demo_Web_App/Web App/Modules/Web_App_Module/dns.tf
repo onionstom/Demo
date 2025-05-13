@@ -14,14 +14,14 @@ data "aws_route53_zone" "selected" {
 # Set the record name, either the main domain or subdomain based on app_name variable
 locals {
   dns_zone_id = var.create_dns_zone ? aws_route53_zone.selected[0].zone_id : data.aws_route53_zone.primary[0].zone_id
-  subdomain = var.app_name == "" ? "" : "${var.app_name}"
+  subdomain   = var.app_name == "main" ? "" : "${var.app_name}"
 }
 
 
 # Create the A record
 resource "aws_route53_record" "a_record" {
   zone_id = data.aws_route53_zone.selected.zone_id
-  name    = "${local.subdomain}"${var.domain}
+  name    = "${locals.subdomain}"${var.domain}
   type    = "A"
 
     alias {
