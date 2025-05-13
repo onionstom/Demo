@@ -1,13 +1,27 @@
-# Get the hosted zone by name
+# Create the hosted soze if it does not already exist
+resource "aws_route53_zone" "selected" {
+  count = var.create_dns_zone ? 1 : 0
+  name  = var.domain
+}
+
+# Get the hosted zone by name as it does not exist
 data "aws_route53_zone" "selected" {
-  name         = "tomonions.co.uk"
+  count        = var.create_dns_zone ? 0 : 1
+  name         = var.domain
   private_zone = false
 }
+
+# Set the record name, either the main domain or subdomain based on app_name variable
+locals {
+  dns_zone_id = var.create_dns_zone ? aws_route53_zone.selected[0].zone_id : data.aws_route53_zone.primary[0].zone_id
+  subdomain = var.app_name == "" ? "" : "${var.app_name}"
+}
+
 
 # Create the A record
 resource "aws_route53_record" "a_record" {
   zone_id = data.aws_route53_zone.selected.zone_id
-  name    = var.domain
+  name    = "${local.subdomain}"${var.domain}
   type    = "A"
 
     alias {
