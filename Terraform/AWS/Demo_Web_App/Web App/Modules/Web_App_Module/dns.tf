@@ -21,8 +21,8 @@ locals {
 
 # Create the A record
 resource "aws_route53_record" "a_record" {
-  zone_id = locals.dns_zone_id
-  name    = "${locals.subdomain}${var.domain}"
+  zone_id = local.dns_zone_id
+  name    = "${local.subdomain}${var.domain}"
   type    = "A"
 
     alias {
