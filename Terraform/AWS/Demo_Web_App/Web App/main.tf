@@ -4,7 +4,7 @@ module "Web_Module_1" {
   # Input Variables
   region = "eu-west-1"
   bucket_prefix    = "web-app-s3"
-  domain           = "TomOnions.co.uk"
+  domain           = "tomonions.co.uk"
   app_name         = "web-app"
   instance_type    = "t2.micro"
   db_name = var.db_name
