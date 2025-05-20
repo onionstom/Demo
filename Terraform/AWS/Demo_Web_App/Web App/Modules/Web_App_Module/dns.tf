@@ -1,4 +1,4 @@
-# Create the hosted soze if it does not already exist
+# Create the hosted zone if it does not already exist
 resource "aws_route53_zone" "selected" {
   count = var.create_dns_zone ? 1 : 0
   name  = var.domain
